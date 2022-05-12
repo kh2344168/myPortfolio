@@ -1,0 +1,101 @@
+.experience_container{
+  display: grid;
+  grid-template-columns: 1fr ;
+  gap: 2rem;
+}
+.experience_container > div{
+  background: var(--color-bg-variant);
+  padding: 2.4rem 5rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+.experience_container > div:hover{
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+.experience_container div h3{
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+.experience_content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+}
+.experience_details{
+  display: flex;
+  gap: 1rem;
+}
+.experience_details_icon{
+  margin-top: 6px;
+  color: var(--color-primary);
+}
+.ex_text{
+  width: 95%;
+}
+.ex_text span{
+  width: 95%;
+  display: block;
+  border: 1px solid rgb(43, 255, 0);
+  border-radius: 0px 20px 20px 0px;
+}
+.ex_text small{
+  background: var(--color-primary);
+  width: 0;
+  display: block;
+  padding: .1rem 1rem;
+  border-radius: 0px 20px 20px 0px;
+  color: black;
+  overflow: hidden;
+  transition: width 1s;
+}
+.experience_content.active .experience_details:first-child span small{
+  width: 90%;
+}
+.experience_content.active .experience_details:nth-child(2) span small{
+  width: 85%;
+}
+.experience_content.active .experience_details:nth-child(3) span small{
+  width: 75%;
+}
+.experience_content.active .experience_details:nth-child(4) span small{
+  width: 60%;
+}
+.experience_content.active .experience_details:nth-child(5) span small{
+  width: 50%;
+}
+.experience_content.active .experience_details:nth-child(6) span small{
+  width: 75%;
+}
+/* ============ MEDIA QUERIES (MEDIUM DEVICES) ======== */
+@media screen and (max-width: 1024px) {
+  .experience_container{
+      grid-template-columns: 1fr;
+      width: var(--container-width-md);
+  }
+  .experience_container > div{
+      width: 80%;
+      padding: 2rem;
+      margin: 0 auto;
+  }
+  .experience_content{
+      padding: 1rem;
+  }
+}
+/* ============ MEDIA QUERIES (SMALL DEVICES) ======== */
+@media screen and (max-width: 600px) {
+  .experience_container{
+      gap: 1rem;
+      width: var(--container-width-sm);
+  }
+  .experience_container > div{
+      width: 100%;
+      padding: 2rem 1rem;
+  }
+  .experience_content{
+    grid-template-columns: 1fr;
+  }
+}
