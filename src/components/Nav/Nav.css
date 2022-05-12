@@ -34,7 +34,7 @@ nav a.active{
 .navigation{
   position: fixed;
   left: 50%;
-  bottom: 4rem;
+  bottom: 2rem;
   transform: translateX(-50%);
   width: 22rem;
   border-radius: 3rem;
@@ -142,4 +142,12 @@ nav a.active{
 }
 .navigation ul li:nth-child(5).active ~ .indicator{
   transform:  translateX(calc(70px * 4));
+}
+@media screen and (max-width: 600px) {
+  .navigation{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    border-radius: 0;
+  }
 }
