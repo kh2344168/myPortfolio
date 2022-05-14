@@ -1,9 +1,11 @@
-import React from 'react';
+import React,{useState , useEffect, useRef ,useContext } from 'react'
 import "./Portfolio.css"
 import IMG1 from "../../assets/portfolio7.jpg";
 import IMG2 from "../../assets/portfolio8.PNG";
 import IMG3 from "../../assets/portfolio9.PNG";
 import IMG4 from "../../assets/portfolio4.jpg";
+import { useInView } from 'react-intersection-observer'
+import {activeNavecontext} from "../../App"
 
 
 const data= [
@@ -29,12 +31,28 @@ const data= [
 ]
 
 
-const protfolio = () => {
+const Protfolio = () => {
+
+  const [ref , inview] = useInView({threshold: .5 ,rootMargin : "-50px" })
+  const active = useContext(activeNavecontext);
+  
+    useEffect(()=>{
+      console.log(inview)
+      if(inview === true){
+        active.setActiveNav("#portfolio")
+      }else{
+
+      }
+  })
+
+  
+
+
   return (
-    <section id='portfolio'>
+    <section  id='portfolio'>
       <h5>my recent work</h5>
       <h2>portfolio</h2>
-      <div className='container portfolio_container'>
+      <div ref={ref} className='container portfolio_container'>
         {
           data.map(({id, image ,title , github ,demo}) =>{
             return (
@@ -56,4 +74,4 @@ const protfolio = () => {
   )
 }
 
-export default protfolio
+export default Protfolio

@@ -1,6 +1,6 @@
 
-import React,{useEffect ,useState} from 'react';
-
+import React from 'react';
+import {useContext ,useEffect ,useState} from 'react'
 import {AiOutlineMail} from "react-icons/ai";
 import {BsMessenger} from "react-icons/bs";
 import {BsWhatsapp} from "react-icons/bs";
@@ -9,6 +9,8 @@ import emailjs from 'emailjs-com';
 import { toast , ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./Contact.css"
+import { useInView } from 'react-intersection-observer'
+import {activeNavecontext} from "../../App"
 
 
 const Contact = () => {
@@ -32,10 +34,24 @@ const Contact = () => {
           console.log(error.text);
       });
   };
+  const [ref , inview] = useInView()
+  const active = useContext(activeNavecontext);
+  
+    useEffect(()=>{
+  
+      if(inview === true){
+   
+        active.setActiveNav("#contact")
+      }else{
+
+      }
+  })
+  
+
 
   return (
     
-    <section id='contact'>
+    <section ref={ref} id='contact'>
       <ToastContainer/>
       <h5>get in touch</h5>
       <h2>contact me</h2>
@@ -65,9 +81,9 @@ const Contact = () => {
           <input type="text" name="name" placeholder='your full name' required />
           <input type="email" name="email" placeholder="your email" required />
           <textarea name="message" id="" cols="30" rows="10" placeholder='your message' required></textarea>
-          <button  type="submit" className='btn btn_primary'>  
+          <button  type="submit" className='btn btn_primary send'>  
           send message 
-          { loadbuttom == true ? <span></span> : "" }
+          { loadbuttom === true ? <span></span> : "" }
           </button>
         </form>
       </div>

@@ -45,6 +45,11 @@ input , textarea{
   resize: none;
   color: var(--color-white);
 }
+form button.send{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
 form button span {
   width: 1.3rem;
   height: 1.3rem;

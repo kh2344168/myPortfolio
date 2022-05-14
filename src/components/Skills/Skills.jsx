@@ -1,33 +1,36 @@
-import React,{useState , useEffect} from 'react'
-import "./Experience.css"
+import React,{useState , useEffect, useRef ,useContext } from 'react'
+import "./Skills.css"
 import {BsFillPatchCheckFill} from "react-icons/bs"
 import { useInView } from 'react-intersection-observer'
+import {activeNavecontext} from "../../App"
 
-const Experience = () => {
-const [active , setactive]= useState("noactive");
+const Skills = () => {
+  
+const [acimationactive , setactive]= useState("noactive");
 const [ref , inview] = useInView()
+const active = useContext(activeNavecontext);
 
   useEffect(()=>{
 
-    if(inview == true){
+    if(inview === true){
       setactive("active")
+      active.setActiveNav("#Skills")
     }else{
       setactive("noactive")
     }
-  
-  })
+})
 
 
 
   
   return (
-    <section id='experience'>
+    <section ref={ref} id='Skills'>
         <h5>wht skills i have</h5>
-        <h2>my experience</h2>
-        <div ref={ref} className='container experience_container'>
+        <h2>my skills</h2>
+        <div  className='container experience_container'>
           <div className="experience_frontend">
             <h3>frontend development</h3>
-            <div  className={"experience_content " + active }>
+            <div  className={"experience_content " + acimationactive }>
                 <article className='experience_details'>
                   <BsFillPatchCheckFill className="experience_details_icon"/>
                   <div className='ex_text'>
@@ -78,4 +81,4 @@ const [ref , inview] = useInView()
   )
 }
 
-export default Experience
+export default Skills

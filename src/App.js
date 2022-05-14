@@ -1,21 +1,28 @@
 import React from 'react';
 import Header from './components/Header/Header';
-import Experience from './components/Experience/Experience';
 import Protfolio from './components/Portfolio/Portfolio';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Nav from './components/Nav/Nav';
+import Skills from './components/Skills/Skills';
+import { useState, createContext, useContext } from "react";
+
+export const activeNavecontext = createContext();
 
 const App = () => {
+
+  const [activeNav , setActiveNav] = useState("#");
+
   return (
     <> 
-    
-    <Header/>
-    <Nav/>
-    <Protfolio/>
-    <Experience/>
-    <Contact/>
-    <Footer/>
+    <activeNavecontext.Provider value={{activeNav , setActiveNav}} >
+      <Header/>
+      <Nav/>
+      <Protfolio/>
+      <Skills/>
+      <Contact/>
+      <Footer/>
+    </activeNavecontext.Provider>
     </>
   )
 }
