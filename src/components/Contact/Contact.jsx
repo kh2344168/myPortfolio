@@ -1,29 +1,42 @@
 
-import React from 'react';
-import "./Contact.css"
+import React,{useEffect ,useState} from 'react';
+
 import {AiOutlineMail} from "react-icons/ai";
 import {BsMessenger} from "react-icons/bs";
 import {BsWhatsapp} from "react-icons/bs";
 import { useRef } from 'react';
 import emailjs from 'emailjs-com';
+import { toast , ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import "./Contact.css"
+
 
 const Contact = () => {
 
   const form = useRef();
+  const [loadbuttom , setLoadbuttom]=useState(false)
 
+  
+  const successfull = ()=> {
+    toast.dark('thanks for your communicate'); 
+  }
   const sendEmail = (e) => {
     e.preventDefault();
-
+    setLoadbuttom(true)
     emailjs.sendForm('service_mbxg24d', 'template_r6ir1ij', form.current, 'zI25F9e_vWnujeibV')
       .then((result) => {
           e.target.reset()
+          setLoadbuttom(false)
+          successfull()
       }, (error) => {
           console.log(error.text);
       });
   };
 
   return (
+    
     <section id='contact'>
+      <ToastContainer/>
       <h5>get in touch</h5>
       <h2>contact me</h2>
       <div className='container contact_container'>
@@ -52,7 +65,10 @@ const Contact = () => {
           <input type="text" name="name" placeholder='your full name' required />
           <input type="email" name="email" placeholder="your email" required />
           <textarea name="message" id="" cols="30" rows="10" placeholder='your message' required></textarea>
-          <button type="submit" className='btn btn_primary'> send message</button>
+          <button  type="submit" className='btn btn_primary'>  
+          send message 
+          { loadbuttom == true ? <span></span> : "" }
+          </button>
         </form>
       </div>
     </section>

@@ -32,42 +32,42 @@ const [ref , inview] = useInView()
                   <BsFillPatchCheckFill className="experience_details_icon"/>
                   <div className='ex_text'>
                     <h4>HTML</h4>
-                    <span><small className='text-light'>90%</small></span>
+                    <span><small className='text-light'></small></span>
                   </div>
                 </article>
                 <article className='experience_details'>
                   <BsFillPatchCheckFill className="experience_details_icon"/>
                   <div className='ex_text'>
                     <h4>css</h4>
-                    <span><small className='text-light'>85%</small></span>
+                    <span><small className='text-light'></small></span>
                   </div>
                 </article>
                 <article className='experience_details'>
                   <BsFillPatchCheckFill className="experience_details_icon"/>
                   <div className='ex_text'>
                     <h4>javascript</h4>
-                    <span><small className='text-light'>75%</small></span>
+                    <span><small className='text-light'></small></span>
                   </div>
                 </article>
                 <article className='experience_details'>
                   <BsFillPatchCheckFill className="experience_details_icon"/>
                   <div className='ex_text'>
                     <h4>bootstrap</h4>
-                    <span><small className='text-light'>60%</small></span>
+                    <span><small className='text-light'></small></span>
                   </div>
                 </article>
                 <article className='experience_details'>
                   <BsFillPatchCheckFill className="experience_details_icon"/>
                   <div className='ex_text'>
                     <h4>jquery</h4>
-                    <span><small className='text-light'>50%</small></span>
+                    <span><small className='text-light'></small></span>
                   </div>
                 </article>
                 <article className='experience_details'>
                   <BsFillPatchCheckFill className="experience_details_icon"/>
                   <div className='ex_text'>
                     <h4>react</h4>
-                    <span><small className='text-light'>75%</small></span>
+                    <span><small className='text-light'></small></span>
                   </div>
                 </article>
             </div>

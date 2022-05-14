@@ -45,6 +45,21 @@ input , textarea{
   resize: none;
   color: var(--color-white);
 }
+form button span {
+  width: 1.3rem;
+  height: 1.3rem;
+  display: inline-block;
+  border-radius: 10px;
+  border: 2px solid;
+  border-left-color: transparent;
+  margin-left: 10px;
+  padding-top: 12px;
+  animation: loop 1s infinite linear ;
+}
+@keyframes loop {
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
 /* ============ MEDIA QUERIES (MEDIUM DEVICES) ======== */
 @media screen and (max-width: 1024px) {
   .container.contact_container{
@@ -54,8 +69,17 @@ input , textarea{
 }
 /* ============ MEDIA QUERIES (SMALL DEVICES) ======== */
 @media screen and (max-width: 600px) {
-  /* .container.contact_container{
-      width: var();
-  } */
+  .container.contact_container {
+    width: 80%;
+  }
+  form{
+    align-items: center;
+  }
 }
-
+.Toastify__progress-bar-theme--dark  {
+  background: var(--color-primary);
+}
+/* .Toastify__toast-theme--light{
+  background-color: black;
+  color: white;
+} */

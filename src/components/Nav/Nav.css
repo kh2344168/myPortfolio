@@ -38,7 +38,7 @@ nav a.active{
   transform: translateX(-50%);
   width: 22rem;
   border-radius: 3rem;
-  background-color: rgb(0 237 0);
+  background-color: var(--color-primary-variant);
   display: grid;
   justify-items: center;
 }
@@ -99,7 +99,7 @@ nav a.active{
   width: 70px;
   height: 70px;
   backdrop-filter: blur(15px);
-  background-color: rgb(0 237 0);
+  background-color: var(--color-primary-variant);
   border-radius: 50%;
   z-index: 1;
   transition: 0.5s;
@@ -113,7 +113,7 @@ nav a.active{
   height: 30px;
   background-color: transparent;
   border-radius: 50%;
-  box-shadow: 15px 18px rgb(0 237 0);
+  box-shadow: 15px 18px var(--color-primary-variant);
 }
 .indicator::after{
   content: "";
@@ -124,7 +124,7 @@ nav a.active{
   height: 30px;
   background-color: transparent;
   border-radius: 50%;
-  box-shadow: -16px 18px rgb(0 237 0);
+  box-shadow: -16px 18px var(--color-primary-variant);
 }
 
 

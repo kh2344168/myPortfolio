@@ -39,7 +39,7 @@
 .ex_text span{
   width: 95%;
   display: block;
-  border: 1px solid rgb(43, 255, 0);
+  border: 1px solid var(--color-primary-variant);
   border-radius: 0px 20px 20px 0px;
 }
 .ex_text small{
@@ -51,6 +51,7 @@
   color: black;
   overflow: hidden;
   transition: width 1s;
+  height: 1.8rem;
 }
 .experience_content.active .experience_details:first-child span small{
   width: 90%;
