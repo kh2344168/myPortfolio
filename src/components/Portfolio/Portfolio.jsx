@@ -33,7 +33,7 @@ const data= [
 
 const Protfolio = () => {
 
-  const [ref , inview] = useInView({threshold: .5 ,rootMargin : "-50px" })
+  const [ref , inview] = useInView({threshold: .5  })
   const active = useContext(activeNavecontext);
   
     useEffect(()=>{
