@@ -8,11 +8,12 @@ const Skills = () => {
   
 const [acimationactive , setactive]= useState("noactive");
 const [ref , inview] = useInView()
+const [refTwo , inviewTwo] = useInView()
 const active = useContext(activeNavecontext);
 
   useEffect(()=>{
 
-    if(inview === true){
+    if((inview === true || inviewTwo === true )){
       setactive("active")
       active.setActiveNav("#Skills")
     }else{
@@ -66,7 +67,7 @@ const active = useContext(activeNavecontext);
                     <span><small className='text-light'></small></span>
                   </div>
                 </article>
-                <article className='experience_details'>
+                <article  className='experience_details'>
                   <BsFillPatchCheckFill className="experience_details_icon"/>
                   <div className='ex_text'>
                     <h4>react</h4>
@@ -77,7 +78,8 @@ const active = useContext(activeNavecontext);
           </div>
           {/*==================== END FRONTEND ============================ */}
         </div>
-    </section>
+        <div ref={refTwo}></div>
+    </section >
   )
 }
 

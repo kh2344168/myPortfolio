@@ -33,7 +33,7 @@ const data= [
 
 const Protfolio = () => {
 
-  const [ref , inview] = useInView({threshold: .5  })
+  const [ref , inview] = useInView()
   const active = useContext(activeNavecontext);
   
     useEffect(()=>{
@@ -49,10 +49,10 @@ const Protfolio = () => {
 
 
   return (
-    <section  id='portfolio'>
+    <section ref={ref} id='portfolio'>
       <h5>my recent work</h5>
       <h2>portfolio</h2>
-      <div ref={ref} className='container portfolio_container'>
+      <div  className='container portfolio_container'>
         {
           data.map(({id, image ,title , github ,demo}) =>{
             return (

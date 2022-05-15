@@ -34,7 +34,7 @@ const Contact = () => {
           console.log(error.text);
       });
   };
-  const [ref , inview] = useInView()
+  const [ref , inview] = useInView({threshold: .3  })
   const active = useContext(activeNavecontext);
   
     useEffect(()=>{
@@ -51,7 +51,7 @@ const Contact = () => {
 
   return (
     
-    <section ref={ref} id='contact'>
+    <section id='contact'>
       <ToastContainer/>
       <h5>get in touch</h5>
       <h2>contact me</h2>
@@ -77,8 +77,8 @@ const Contact = () => {
           </article>
         </div>
         {/* END OF CONTCT OPTIONS */}
-        <form ref={form} onSubmit={sendEmail} action="">
-          <input type="text" name="name" placeholder='your full name' required />
+        <form  ref={form} onSubmit={sendEmail} action="">
+          <input ref={ref} type="text" name="name" placeholder='your full name' required />
           <input type="email" name="email" placeholder="your email" required />
           <textarea name="message" id="" cols="30" rows="10" placeholder='your message' required></textarea>
           <button  type="submit" className='btn btn_primary send'>  

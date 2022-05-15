@@ -19,22 +19,22 @@ const Nav = () => {
           <div  className="navigation">
           <ul>
             
-            <li onClick={()=> active.setActiveNav("#")} className={active.activeNav == "#" ? "list active" :"list" } >
+            <li onClick={()=> active.setActiveNav("#")}  className={active.activeNav === "#" ? "list active" :"list" } >
               <a href="#" >
                 <span className="icon"><AiOutlineHome/></span>
               </a>
             </li>
-            <li  onClick={()=> active.setActiveNav("#portfolio")} className={active.activeNav == "#portfolio" ? "list active" :"list" } >
-              <a href="#portfolio"   onClick={()=> active.setActiveNav("#portfolio")} className={active.activeNav == "#portfolio" ? "active" :"" }>
+            <li  onClick={()=> active.setActiveNav("#portfolio")} className={active.activeNav === "#portfolio" ? "list active" :"list" } >
+              <a href="#portfolio"  >
                 <span className="icon"><RiServiceLine/></span>
               </a>
             </li>
-            <li onClick={()=> active.setActiveNav("#Skills")} className={active.activeNav == "#Skills" ? "list active" :"list" }>
+            <li  onClick={()=> active.setActiveNav("#Skills")} className={active.activeNav === "#Skills" ? "list active" :"list" }>
               <a href="#Skills">
                 <span className="icon"><BiBookBookmark/></span>
               </a>
             </li>
-            <li onClick={()=> active.setActiveNav("#contact")} className={active.activeNav == "#contact" ? "list active" :"list" }>
+            <li  className={active.activeNav === "#contact" ? "list active" :"list" }>
               <a  href="#contact">
                 <span className="icon"><FiMessageSquare/></span>
               </a>

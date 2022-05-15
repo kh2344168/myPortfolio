@@ -1,4 +1,6 @@
-i
+#Skills{
+  height: 40rem;
+}
 .experience_container{
   display: grid;
   grid-template-columns: 1fr ;
