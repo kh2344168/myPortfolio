@@ -1,4 +1,4 @@
-import React,{useState , useEffect, useRef ,useContext } from 'react'
+import React,{useState , useEffect ,useContext } from 'react'
 import "./Skills.css"
 import {BsFillPatchCheckFill} from "react-icons/bs"
 import { useInView } from 'react-intersection-observer'

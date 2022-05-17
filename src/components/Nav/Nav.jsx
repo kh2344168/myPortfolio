@@ -4,7 +4,7 @@ import {AiOutlineHome} from "react-icons/ai";
 import {BiBookBookmark} from "react-icons/bi";
 import {RiServiceLine} from "react-icons/ri";
 import {FiMessageSquare} from "react-icons/fi";
-import { useState , useEffect , useRef ,useContext  } from 'react';
+import {  useContext  } from 'react';
 import {activeNavecontext} from "../../App"
 const Nav = () => {
   // const [activeNav , setActiveNav] = useState("#");
@@ -19,8 +19,8 @@ const Nav = () => {
           <div  className="navigation">
           <ul>
             
-            <li onClick={()=> active.setActiveNav("#")}  className={active.activeNav === "#" ? "list active" :"list" } >
-              <a href="#" >
+            <li onClick={()=> active.setActiveNav("#Header")}  className={active.activeNav === "#Header" ? "list active" :"list" } >
+              <a href="#Header" >
                 <span className="icon"><AiOutlineHome/></span>
               </a>
             </li>

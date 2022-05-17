@@ -13,14 +13,14 @@ const active = useContext(activeNavecontext);
   useEffect(()=>{
 
     if(inview === true || inviewTwo === true ){
-      active.setActiveNav("#")
+      active.setActiveNav("#Header")
     }else{
 
     }
 })
 
   return (
-    <header ref={ref}  >
+    <header id='Header' ref={ref}  >
       <div  className="container header_container">
         <h5>hello i 'm</h5>
         <h1>khaled aly </h1>

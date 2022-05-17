@@ -1,9 +1,8 @@
-import React,{useState , useEffect, useRef ,useContext } from 'react'
+import React,{useEffect ,useContext } from 'react'
 import "./Portfolio.css"
 import IMG1 from "../../assets/portfolio7.jpg";
 import IMG2 from "../../assets/portfolio8.PNG";
 import IMG3 from "../../assets/portfolio9.PNG";
-import IMG4 from "../../assets/portfolio4.jpg";
 import { useInView } from 'react-intersection-observer'
 import {activeNavecontext} from "../../App"
 
@@ -37,7 +36,6 @@ const Protfolio = () => {
   const active = useContext(activeNavecontext);
   
     useEffect(()=>{
-      console.log(inview)
       if(inview === true){
         active.setActiveNav("#portfolio")
       }else{
@@ -63,7 +61,7 @@ const Protfolio = () => {
                 <h3>this is a portfolio item title</h3>
                 <div className="portfolio_item_cta">
                   {/* <a href={github} className='btn'>github</a> */}
-                  <a href={demo} className='btn btn_primary' target="_blank">liveDemo</a>
+                  <a href={demo} className='btn btn_primary' target="_blank"  rel="noreferrer" >liveDemo</a>
                 </div>
             </article>
             )

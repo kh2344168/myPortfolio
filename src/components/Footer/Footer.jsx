@@ -10,7 +10,7 @@ const Footer = () => {
           <a href="" className='footer_logo'>egator</a>
           <ul className='permalinks'>
             <li><a href="#">home</a></li>
-            <li><a href="#experience">experience</a></li>
+            <li><a href="#Skills">Skills</a></li>
             <li><a href="#portfolio">portfolio</a></li>
             <li><a href="#contact">contact</a></li>
           </ul>
